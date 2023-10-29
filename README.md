@@ -1,6 +1,11 @@
 以下のサンプル docker 構築の手順（コマンド入力手順）
 （例）Next.js、Django
+
 （Git:ファイル保存場所）
+https://github.com/tsubokura-shuhei/docker-next-django
+
+(GitClone:)
+https://github.com/tsubokura-shuhei/docker-next-django.git
 
 ①【イメージの初期構築】
 docker-compose build
