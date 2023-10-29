@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  django:
+    build:
+      context: ./django
+      dockerfile: Dockerfile
+    volumes:
+      - ./django:/django
+    command: python3 /django/manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    tty: true
+
+  next:
+    build:
+      context: ./next
+      dockerfile: Dockerfile
+    volumes:
+      - ./next:/next
+    ports:
+      - "3000:3000"
+    command: bash -c "npm run dev"
